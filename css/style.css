@@ -1,12 +1,61 @@
-.box {
-    width: 200px;
-    padding: 25px;
-    border: 5px solid black;
-    margin: 50px;
-    background-color: lightblue;
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #F4F6F7; /* Light Gray Background */
+    color: #333333; /* Dark Gray Text */
 }
 
-/* # is ID for a page & . is indicates class */
+/* --- Typography --- */
+h1, h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #007BFF; /* Accent Blue for Headings */
+}
+
+/* --- Header and Navigation --- */
+header {
+    background-color: #ffffff;
+    padding: 1em;
+    border-bottom: 2px solid #007BFF;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+/* --- Main Content --- */
+main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+nav {
+  /* Desktop navigation styles */
+  display: flex;
+}
+
 #clock {
   position: absolute;
   top: 10px;
