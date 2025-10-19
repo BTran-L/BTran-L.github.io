@@ -1,36 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Tran L. Portfolio</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="favicon.png">
-  <script src="js/clock.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tran Lam - Chinese-Vietnamese UX designer based in Helsinki">
+    <meta name="author" content="Tran Lam">
+    <title>TRANLAM - UX Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="project1.html">Project 1</a></li>
-          <li><a href="project2.html">Project 2</a></li>
-          <li><a href="project3.html">Project 3</a></li>
-          <li><a href="project4.html">Project 4</a></li>
-      </ul>
-    </nav>     
-    <span id="clock"></span>
-  </header>
-  
-  <h1>Hello world!</h1>
-  <p>I am Tran L., a designer who is learning to code. I like to make digital experiences easier and simplier for everyone.</p>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">TRANLAM</a>
+                
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" type="button">
+                    <span class="hamburger" aria-hidden="true"></span>
+                    <span class="hamburger" aria-hidden="true"></span>
+                    <span class="hamburger" aria-hidden="true"></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="work.html" class="nav-link">Work</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="box">
-    <p> This is the content inside the box.</p>
-  </div>
-  <p>This is a separate paragraph to show how margin marks.</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-simple">
+            <div class="container">
+                <h1>Tran Lam is a Chinese-Vietnamese UX designer, based in Helsinki.</h1>
+                <p class="subtitle">A selection of work done between 2019-2025</p>
+            </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section class="projects">
+            <div class="container">
+                <h2 class="sr-only">Featured Projects</h2>
+                
+                <!-- Project 1 -->
+                <article class="project">
+                    <a href="project-otava.html" class="project-link">
+                        <div class="project-image">
+                            <div class="placeholder-project" role="img" aria-label="OTAVA Learning project preview">
+                                OTAVA Learning Project
+                            </div>
+                        </div>
+                    </a>
+                    <div class="project-info">
+                        <h2><a href="project-otava.html" class="project-title-link">OTAVA Learning</a></h2>
+                        <p>Led comprehensive UX design for Nova's new learning platform, focusing on improving teacher day-to-day experience for a smooth school day and a inclusive learning platform for all.</p>
+                    </div>
+                </article>
 
+                <!-- Project 2 -->
+                <article class="project">
+                    <a href="project-relex.html" class="project-link">
+                        <div class="project-image">
+                            <div class="placeholder-project" role="img" aria-label="RELEX Solutions project preview">
+                                RELEX Solutions Project
+                            </div>
+                        </div>
+                    </a>
+                    <div class="project-info">
+                        <h2><a href="project-relex.html" class="project-title-link">RELEX Solutions</a></h2>
+                        <p>Redesigned RELEX's space and assortment management interface to optimize retail planogram workflows for major clients.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>hello@tranlam.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
