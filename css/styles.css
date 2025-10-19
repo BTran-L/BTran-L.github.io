@@ -246,7 +246,7 @@ header {
     max-width: 60%;
 }
 
-.placeholder-project {
+.profile-image {
     width: 100%;
     aspect-ratio: 16 / 10;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
@@ -310,7 +310,7 @@ header {
     line-height: 1.8;
 }
 
-.photo-placeholder {
+.profile-image {
     width: 100%;
     max-width: 400px;
     aspect-ratio: 3 / 4;
