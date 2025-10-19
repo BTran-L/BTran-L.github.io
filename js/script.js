@@ -1,27 +1,22 @@
-// Portfolio Website JavaScript
-// Simple functionality for smooth interactions
 
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===================================
-    // Mobile Menu Toggle
-    // ===================================
+
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
     
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function() {
-            // Toggle active class on button and menu
+
             mobileMenuBtn.classList.toggle('active');
             navMenu.classList.toggle('active');
             
-            // Update aria-expanded for accessibility
+           
             const isExpanded = navMenu.classList.contains('active');
             mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
         });
         
-        // Close menu when clicking nav links
+
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
@@ -31,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Close menu when clicking outside
+
         document.addEventListener('click', function(event) {
             const isClickInsideNav = navMenu.contains(event.target);
             const isClickOnButton = mobileMenuBtn.contains(event.target);
@@ -44,9 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===================================
-    // Smooth Scroll for Anchor Links
-    // ===================================
+
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     
     anchorLinks.forEach(link => {
@@ -68,23 +61,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===================================
-    // Continuous Company Logo Scroll
-    // ===================================
+
     const companiesScroll = document.querySelector('.companies-scroll');
     
     if (companiesScroll) {
-        // Clone the content for seamless infinite scroll
+   
         const scrollContent = companiesScroll.innerHTML;
         companiesScroll.innerHTML = scrollContent + scrollContent;
         
         let scrollPosition = 0;
-        const scrollSpeed = 0.5; // pixels per frame
+        const scrollSpeed = 0.5;
         
         function animateScroll() {
             scrollPosition += scrollSpeed;
             
-            // Reset when we've scrolled through the first copy
+      
             if (scrollPosition >= companiesScroll.scrollWidth / 2) {
                 scrollPosition = 0;
             }
@@ -93,41 +84,36 @@ document.addEventListener('DOMContentLoaded', function() {
             requestAnimationFrame(animateScroll);
         }
         
-        // Start animation
+
         animateScroll();
     }
-    
-    // ===================================
-    // Active Navigation Highlighting
-    // ===================================
+
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href');
         
-        // Remove any existing active class
+
         link.classList.remove('active');
         
-        // Add active class to current page
+
         if (linkPage === currentPage) {
             link.classList.add('active');
         } else if ((currentPage === '' || currentPage === 'index.html') && linkPage === 'index.html') {
-            // Handle root path for home page
+
             link.classList.add('active');
         }
     });
     
-    // ===================================
-    // Lazy Loading for Images (when real images are added)
-    // ===================================
+
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
                     
-                    // If image has data-src attribute, load it
+      
                     if (img.dataset.src) {
                         img.src = img.dataset.src;
                         img.classList.add('loaded');
@@ -137,14 +123,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Observe all images with data-src attribute
+
         const lazyImages = document.querySelectorAll('img[data-src]');
         lazyImages.forEach(img => imageObserver.observe(img));
     }
     
-    // ===================================
-    // Add fade-in animation on scroll (optional enhancement)
-    // ===================================
+
     const observeElements = document.querySelectorAll('.project, .contact-item');
     
     if ('IntersectionObserver' in window && observeElements.length > 0) {
@@ -167,8 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===================================
-    // Console message
-    // ===================================
+
     console.log('TRANLAM Portfolio • Designed with simplicity in mind');
 });
