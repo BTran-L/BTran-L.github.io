@@ -126,7 +126,7 @@ header {
     font-weight: 600;
 }
 
-/* Mobile menu button */
+
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -157,7 +157,7 @@ header {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Mobile Navigation */
+
 @media (max-width: 767px) {
     .mobile-menu-btn {
         display: flex;
@@ -193,9 +193,7 @@ header {
     }
 }
 
-/* ===================================
-   Hero Section (Home Page)
-   =================================== */
+
 
 .hero-simple {
     padding: 4rem 0 3rem 0;
